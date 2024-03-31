@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background_image.jpg'); /* Add background image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff; /* White color for text */
+        }
+        .login {
+            color: #ffffff; /* Default link color */
+            text-decoration: none; /* Remove underline */
+        }
+        
+        .login:visited {
+            color: #ffffff; /* Visited link color */
+        }
+        
+        .login:hover {
+            color: #dddddd; /* Hover link color */
+        }
+        
+        .login:active {
+            color: #ffffff; /* Active link color */
+        }        
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #00fbff; /* Yellow color for heading */
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .login-form {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+        }
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: calc(100% - 22px);
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #333333;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #444444;
+        }
+        footer {
+            margin-top: 20px;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        .reset-button {
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <h1>Login Panel</h1>
+        <div class="login-form">
+            <form id="loginForm">
+                <input type="text" id="username" name="username" placeholder="Username" required><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
+                <button type="button" class="reset-button">Reset</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if ((username === "arshu" && password === "1234") || (username === "akshat" && password === "1234")) {
+                localStorage.setItem("loggedIn", "true");
+                window.location.href = "main.html"; // Redirect to main.html after successful login
+            } else {
+                alert("Invalid username or password.");
+            }
+        });
+
+        // Reset button functionality
+        document.querySelector(".reset-button").addEventListener("click", function() {
+            document.getElementById("loginForm").reset();
+        });
+    </script>
+</body>
+</html>
