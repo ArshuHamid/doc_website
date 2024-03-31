@@ -12,24 +12,19 @@
             background-image: url('background_image.jpg'); /* Add your background image path */
             background-size: cover;
             background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             color: #ffffff; /* White color for text */
         }
         .container {
-            max-width: max-content;
             padding: 20px;
             text-align: center;
         }
         h1 {
-            font-size: 48px; /* Main heading font size */
+            font-size: 36px; /* Main heading font size */
             margin-bottom: 20px;
             color: #ffcc00; /* Yellow color for main heading */
         }
         p {
-            font-size: 19px; /* Decreased font size for paragraphs */
+            font-size: 16px; /* Decreased font size for paragraphs */
             margin-bottom: 30px;
             font-family: 'Lucida Sans';
         }
@@ -40,20 +35,21 @@
         }
         .document-item {
             margin: 20px;
-            padding: 30px;
+            padding: 20px;
             background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
             border-radius: 10px;
             transition: background-color 0.3s ease;
             cursor: pointer;
-            width: 300px; /* Set fixed width for better layout */
+            max-width: 300px; /* Set maximum width for better layout */
         }
         .document-item:hover {
             background-color: rgba(255, 255, 255, 0.3); /* Lighten background on hover */
         }
         .document-item img {
-            width: 150px; /* Adjusted image size */
-            height: 150px; /* Adjusted image size */
-            margin-bottom: 20px;
+            width: 100%; /* Make the image responsive */
+            max-width: 150px; /* Limit maximum width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px;
         }
         h2 {
             font-size: 24px; /* Font size for document item headings */
@@ -74,19 +70,16 @@
             color: #ffffff; /* Default link color */
             text-decoration: none; /* Remove underline */
         }
-
-        .logout:visited {
-            color: #ffffff; /* Visited link color */
-        }
-
         .logout:hover {
             color: #dddddd; /* Hover link color */
         }
-
-        .logout:active {
-            color: #ffffff; /* Active link color */
-        }
     </style>
+    <script>
+        // Check for the flag upon page load
+        if (!localStorage.getItem("loggedIn")) {
+            window.location.href = "index.html"; // Redirect to index.html if not logged in
+        }
+    </script>
 </head>
 <body>
     <div class="container">

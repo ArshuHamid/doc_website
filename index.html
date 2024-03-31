@@ -119,6 +119,15 @@
         // Reset button functionality
         document.querySelector(".reset-button").addEventListener("click", function() {
             document.getElementById("loginForm").reset();
+
+
+
+            
+            if (!localStorage.getItem("loggedIn")) {
+                window.location.href = "main.html"; // Redirect to main.html if not logged in
+            }
+
+
         });
     </script>
 </body>
