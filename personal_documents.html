@@ -1,0 +1,115 @@
+<!--personal_documents.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Documents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background_image.jpg'); /* Add background image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff; /* White color for text */
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ffcc00; /* Yellow color for heading */
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .back-button {
+            margin-bottom: 20px;
+        }
+        .back-button a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #333333;
+            border-radius: 5px;
+        }
+        .documents {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .document-item {
+            margin: 20px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            width: 300px;
+        }
+        .document-item:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .document-item img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .semester-link {
+            padding: 20px;
+            background-color: #333333;
+            border-radius: 10px;
+            margin: 10px;
+            width: 200px;
+            transition: background-color 0.3s ease;
+        }
+        .semester-link:hover {
+            background-color: #444444;
+            cursor: pointer;
+        }
+        .semester-link a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Documents</h1>
+        <p>Access all your college-related documents here, including academic transcripts, syllabus, and important notices.</p>
+        <div class="documents">
+            <div class="semester-link">
+                <a href="file:///D:/UCER/Semester-I/">AADHAR Card</a>
+            </div>
+            <div class="semester-link">
+                <a href="file:///D:/UCER/Semester-II/">Voter ID</a>
+            </div>
+            <div class="semester-link">
+                <a href="file:///D:/UCER/Semester-III/">PAN Card</a>
+            </div>
+            <div class="semester-link">
+                <a href="file:///D:/UCER/Semester-IV/">Signature</a>
+            </div>
+            <div class="semester-link">
+                <a href="file:///D:/UCER/Semester-V/">Semester V</a>
+            </div>
+        </div>
+        <br><div class="back-button">
+            <a href="index.html">Back</a>
+        </div>
+    </div>
+</body>
+</html>

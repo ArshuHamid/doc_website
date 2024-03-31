@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background_image.jpg'); /* Add your background image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff; /* White color for text */
+        }
+        .container {
+            max-width: max-content;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px; /* Main heading font size */
+            margin-bottom: 20px;
+            color: #ffcc00; /* Yellow color for main heading */
+        }
+        p {
+            font-size: 19px; /* Decreased font size for paragraphs */
+            margin-bottom: 30px;
+            font-family: 'Lucida Sans';
+        }
+        .documents {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .document-item {
+            margin: 20px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            width: 300px; /* Set fixed width for better layout */
+        }
+        .document-item:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Lighten background on hover */
+        }
+        .document-item img {
+            width: 150px; /* Adjusted image size */
+            height: 150px; /* Adjusted image size */
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px; /* Font size for document item headings */
+            margin-bottom: 10px;
+        }
+        .logout-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ff0000; /* Red color for logout button */
+            color: #ffffff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logout {
+            color: #ffffff; /* Default link color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .logout:visited {
+            color: #ffffff; /* Visited link color */
+        }
+
+        .logout:hover {
+            color: #dddddd; /* Hover link color */
+        }
+
+        .logout:active {
+            color: #ffffff; /* Active link color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Document Management System</h1>
+        <p>Welcome to the centralized repository for all your college and school documents. Access your documents conveniently by category:</p>
+        <div class="documents">
+            <div class="document-item">
+                <img src="personal_logo.png" alt="Personal Documents" onclick="window.location.href='personal_documents.html';">
+                <h2>Personal Documents</h2>
+                <p>Access all your government documents here, including AADHAR, Voter ID, PAN Card and many more.</p>
+            </div>
+            <div class="document-item">
+                <img src="school_logo.png" alt="School Documents" onclick="window.location.href='school_documents.html';">
+                <h2>School Documents</h2>
+                <p>Explore your school documents by class (10th, 11th, and 12th) and access resources such as study materials and exam schedules.</p>
+            </div>
+            <div class="document-item">
+                <img src="college_logo.png" alt="College Documents" onclick="window.location.href='college_documents.html';">
+                <h2>College Documents</h2>
+                <p>Access all your college-related documents here, including academic transcripts, syllabus, and important notices.</p>
+            </div>
+        </div>
+        <button class="logout-button"><a href="index.html" class="logout">Logout</a></button>
+    </div>
+</body>
+</html>

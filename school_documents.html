@@ -1,0 +1,109 @@
+<!--school_documents.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Documents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background_image.jpg'); /* Add background image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff; /* White color for text */
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ffcc00; /* Yellow color for heading */
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .back-button {
+            margin-bottom: 20px;
+        }
+        .back-button a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #333333;
+            border-radius: 5px;
+        }
+        .documents {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .document-item {
+            margin: 20px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            width: 300px;
+        }
+        .document-item:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .document-item img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .class-link {
+            padding: 20px;
+            background-color: #333333;
+            border-radius: 10px;
+            margin: 10px;
+            width: 200px;
+            transition: background-color 0.3s ease;
+        }
+        .class-link:hover {
+            background-color: #444444;
+            cursor: pointer;
+        }
+        .class-link a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>School Documents</h1>
+        <p>Explore your school documents by class (10th, 11th, and 12th) and access resources such as study materials and exam schedules.</p>
+        <div class="documents">
+            <div class="class-link">
+                <a href="file:///D:/School/Class-10/">Class 10</a>
+            </div>
+            <div class="class-link">
+                <a href="file:///D:/School/Class-11/">Class 11</a>
+            </div>
+            <div class="class-link">
+                <a href="file:///D:/School/Class-12/">Class 12</a>
+            </div>
+        </div>
+        <br><div class="back-button">
+            <a href="index.html">Back</a>
+        </div>
+    </div>
+</body>
+</html>
